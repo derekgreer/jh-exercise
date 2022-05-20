@@ -1,0 +1,16 @@
+version: "3.4"
+services:
+  api: 
+    image: jh-exercise-api
+    container_name: "jh-exercise-api"
+    build:
+      context: .
+      dockerfile: ./JHExercise.API/Dockerfile
+      args:
+        VERSION: "1.0.0"
+        CONFIGURATION: "Debug"
+    ports:
+      - "5454:5000"
+    environment:
+        ASPNETCORE_ENVIRONMENT: "Development"
+        ASPNETCORE_URLS: "http://+:5000"

@@ -1,0 +1,40 @@
+# Build Generated Items
+artifacts/
+build/
+dist/
+reports/
+tools/
+node_modules/
+
+# IDE Generated Items
+[Bb]in/
+[Oo]bj/
+TestResults/
+PrecompiledWeb/
+**/packages/
+*.gpState
+*.suo
+*.user
+*[Rr]e[Ss]harper*
+*.cache
+TestResult.xml
+.vs
+**/.idea/
+
+# Terraform Items
+**/.terraform/*
+**/*.swp
+*.tfstate
+*.tfstate.*
+**/crash.log
+**/tfplan
+**/local.*.tfvars
+**/.terraform.lock.hcl
+
+
+# Merge Tool Items
+*.orig
+*.bak
+
+# Misc Items
+*.log

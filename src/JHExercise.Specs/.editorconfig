@@ -1,0 +1,7 @@
+root = true
+
+[*.cs]
+resharper_inconsistent_naming_highlighting = none
+resharper_unused_field_compiler_highlighting = none
+resharper_c_sharp_warnings_cs8618_highlighting = none
+resharper_class_never_instantiated_global_highlighting = none

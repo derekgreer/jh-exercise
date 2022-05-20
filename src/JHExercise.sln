@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JHExercise.Specs", "JHExercise.Specs\JHExercise.Specs.csproj", "{AF9583A6-C2F3-4DDD-91B2-0530E2AA32C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Specifications", "Specifications", "{A17A775C-4626-45F0-99C9-B77B3341722D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{95752F47-D8C7-4D4E-92DB-C2F02643326A}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JHExercise.API", "JHExercise.API\JHExercise.API.csproj", "{BB58A9B9-C1BA-4034-A706-BE3092995F55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JHExercise.Domain", "JHExercise.Domain\JHExercise.Domain.csproj", "{A493298F-1A56-4D17-9355-D4BEF06336A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JHExercise.Application", "JHExercise.Application\JHExercise.Application.csproj", "{5C4BA3E3-EBA7-4177-867D-636BB3659A41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JHExercise.Infrastructure", "JHExercise.Infrastructure\JHExercise.Infrastructure.csproj", "{32553264-CF73-4C54-A4AC-ADA35C91F5C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF9583A6-C2F3-4DDD-91B2-0530E2AA32C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF9583A6-C2F3-4DDD-91B2-0530E2AA32C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF9583A6-C2F3-4DDD-91B2-0530E2AA32C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF9583A6-C2F3-4DDD-91B2-0530E2AA32C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB58A9B9-C1BA-4034-A706-BE3092995F55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB58A9B9-C1BA-4034-A706-BE3092995F55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB58A9B9-C1BA-4034-A706-BE3092995F55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB58A9B9-C1BA-4034-A706-BE3092995F55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A493298F-1A56-4D17-9355-D4BEF06336A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A493298F-1A56-4D17-9355-D4BEF06336A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A493298F-1A56-4D17-9355-D4BEF06336A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A493298F-1A56-4D17-9355-D4BEF06336A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C4BA3E3-EBA7-4177-867D-636BB3659A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C4BA3E3-EBA7-4177-867D-636BB3659A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C4BA3E3-EBA7-4177-867D-636BB3659A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C4BA3E3-EBA7-4177-867D-636BB3659A41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32553264-CF73-4C54-A4AC-ADA35C91F5C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32553264-CF73-4C54-A4AC-ADA35C91F5C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32553264-CF73-4C54-A4AC-ADA35C91F5C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32553264-CF73-4C54-A4AC-ADA35C91F5C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AF9583A6-C2F3-4DDD-91B2-0530E2AA32C5} = {A17A775C-4626-45F0-99C9-B77B3341722D}
+		{BB58A9B9-C1BA-4034-A706-BE3092995F55} = {95752F47-D8C7-4D4E-92DB-C2F02643326A}
+		{A493298F-1A56-4D17-9355-D4BEF06336A6} = {95752F47-D8C7-4D4E-92DB-C2F02643326A}
+		{5C4BA3E3-EBA7-4177-867D-636BB3659A41} = {95752F47-D8C7-4D4E-92DB-C2F02643326A}
+		{32553264-CF73-4C54-A4AC-ADA35C91F5C9} = {95752F47-D8C7-4D4E-92DB-C2F02643326A}
+	EndGlobalSection
+EndGlobal

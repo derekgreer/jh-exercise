@@ -1,0 +1,35 @@
+{
+  "name": "jh-example",
+  "version": "0.0.1",
+  "description": "Jack Henry Exercise",
+  "config": {
+    "configuration": "Release",
+    "projectName": "JHExercise",
+    "environment": "dv1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swagup-com/widget-service"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "ci:build": "npm-run-all clean verify build:api",
+    "ci:release": "standard-version -a --releaseCommitMessageFormat=\"chore(release): {{currentTag}}; [skip ci]\"",
+    "ci:deploy": "npm-run-all deploy:terraform deploy:db",
+    "clean": "rm -rf dist build",
+    "prebuild": "npm run clean",
+    "build:api": "npm-run-all build:api:*",
+    "build:api:image": "(cd src && docker build --build-arg VERSION=${npm_package_version} -f ${npm_package_config_projectName}.API/Dockerfile -t ra-web-api:latest . && docker image ls)",
+    "verify": "dotnet test src/*.Specs/*.csproj --configuration ${npm_package_config_configuration}"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copyfiles": "^2.2.0",
+    "globstar": "^1.0.0",
+    "npm-run-all": "^4.0.2",
+    "standard-version": "^9.1.1"
+  }
+}
