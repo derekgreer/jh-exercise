@@ -1,6 +1,9 @@
 using System.Reflection;
 using Autofac;
+using Autofac.Extras.DynamicProxy;
+using Castle.DynamicProxy;
 using JHExercise.API.Initialization.Extensions;
+using JHExercise.Domain.Services;
 using JHExercise.Infrastructure.Services;
 using Module = Autofac.Module;
 

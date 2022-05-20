@@ -21,7 +21,7 @@ public class TestWebApplicationFactory : WebApplicationFactory<Program>
     {
         _configure = configure;
     }
-
+    
     protected override IHost CreateHost(IHostBuilder builder)
     {
         builder.ConfigureServices(services =>

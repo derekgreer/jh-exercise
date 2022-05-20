@@ -4,6 +4,7 @@ using Autofac.Extensions.DependencyInjection;
 using ConventionalOptions.DependencyInjection;
 using FluentValidation.AspNetCore;
 using JHExercise.API.Initialization.Extensions;
+using JHExercise.API.Initialization.Modules;
 using JHExercise.API.Middleware;
 using JHExercise.API.Models;
 using JHExercise.Infrastructure.Services;
@@ -51,7 +52,7 @@ public class Bootstrapper
                 fv.ImplicitlyValidateChildProperties = true;
             });
         builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
+        builder.Services.AddSwaggerGen(o => o.DescribeAllParametersInCamelCase());
 
         builder.Services.AddOptions();
         builder.Services.RegisterOptionsFromAssemblies(builder.Configuration, Assembly.GetExecutingAssembly(), typeof(AccountingServiceOptions).Assembly);
@@ -68,12 +69,16 @@ public class Bootstrapper
         });
 
         builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
-        builder.Host.ConfigureContainer<ContainerBuilder>(builder =>
-            builder.RegisterModulesFor(Assembly.GetExecutingAssembly()));
+        
+        builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
+        {
+            containerBuilder.RegisterModule<ConventionRegistrationModule>();
+
+            if(string.IsNullOrEmpty(Environment.GetEnvironmentVariable("CACHING_DISABLED")))
+                containerBuilder.RegisterModule<CachingModule>();
+        });
 
         builder.Host.UseSerilog((ctx, lc) => lc.ReadFrom.Configuration(ctx.Configuration));
-
-        builder.Services.AddSwaggerGen(o => o.DescribeAllParametersInCamelCase());
 
         var app = builder.Build();
         return app;
