@@ -6,6 +6,7 @@ using FluentValidation.AspNetCore;
 using JHExercise.API.Initialization.Extensions;
 using JHExercise.API.Middleware;
 using JHExercise.API.Models;
+using JHExercise.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 
@@ -53,7 +54,7 @@ public class Bootstrapper
         builder.Services.AddSwaggerGen();
 
         builder.Services.AddOptions();
-        builder.Services.RegisterOptionsFromAssemblies(builder.Configuration, Assembly.GetExecutingAssembly());
+        builder.Services.RegisterOptionsFromAssemblies(builder.Configuration, Assembly.GetExecutingAssembly(), typeof(AccountingServiceOptions).Assembly);
 
         builder.Services.AddHealthChecks();
 
